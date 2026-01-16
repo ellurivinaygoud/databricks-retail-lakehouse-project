@@ -1,26 +1,27 @@
 # Databricks End-to-End Retail Lakehouse Project
 
-## Overview
-An end-to-end data engineering pipeline built using Databricks Lakehouse architecture.
+## 📌 Overview
+This project demonstrates an end-to-end data pipeline using Databricks Lakehouse. 
+It ingests raw sales data, transforms it through Bronze, Silver, and Gold layers, 
+and performs analytics using SQL.
 
-## Architecture
-Bronze → Silver → Gold Delta Lake layers
+## 📊 Architecture
+The pipeline follows a Medallion architecture:
+- **Bronze Layer**: Raw data ingestion
+- **Silver Layer**: Data cleaning & transformation
+- **Gold Layer**: Aggregated analytics tables
 
-## Tech Stack
+## 🚀 Technologies
 - Databricks
 - PySpark
 - Delta Lake
 - Databricks SQL
-- Databricks Workflows
+- Workflows
 
-## Pipeline Flow
-1. Raw CSV data ingested into Bronze Delta table  
-2. Data cleaning and transformation in Silver layer  
-3. Aggregated analytics-ready Gold layer  
-4. SQL analytics on Gold tables  
-5. Pipeline orchestration using Databricks Workflows
-
-## Sample SQL Query
-```sql
-SELECT * FROM gold_country_sales ORDER BY Revenue DESC;
+## 🧠 Pipeline Steps
+1. Ingest raw CSV into Bronze Delta table  
+2. Clean & transform into Silver layer  
+3. Aggregate data into Gold layer  
+4. Run SQL analytics  
+5. Schedule notebooks using Workflows
 
